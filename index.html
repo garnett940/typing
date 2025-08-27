@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スーパーヒーロー タイピング</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>スーパーヒーロー タイピング</h1>
+            <div class="score-board">
+                <span>得分: <span id="score">0</span></span>
+                <span>连击: <span id="combo">0</span></span>
+                <span>生命: <span id="lives">3</span></span>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="enemy-container">
+                <div id="enemy-image" class="enemy-image"></div>
+                <div id="enemy-name" class="enemy-name"></div>
+            </div>
+            
+            <div class="input-area">
+                <div class="input-display">
+                    <span id="typed-text" class="typed-text"></span>
+                    <span id="remaining-text" class="remaining-text"></span>
+                </div>
+                <input type="text" id="game-input" placeholder="开始输入..." autocomplete="off">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="start-btn" class="btn">开始游戏</button>
+            <button id="pause-btn" class="btn" disabled>暂停</button>
+            <button id="restart-btn" class="btn">重新开始</button>
+        </div>
+        
+        <div id="game-over" class="game-over hidden">
+            <div class="game-over-content">
+                <h2>游戏结束</h2>
+                <p>最终得分: <span id="final-score">0</span></p>
+                <button id="play-again-btn" class="btn">再玩一次</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
